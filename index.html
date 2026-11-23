@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abhishek Chandran M R | Robotics &amp; Embedded Systems</title>
+<meta name="description" content="Robotics and embedded systems student building rescue rovers, multi-axis arms and edge-AI systems. B.Tech ECE at JEC and BS Aeronautics and Space Technology at IIT Madras.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#e8eef3; --paper2:#f4f7f9; --ink:#10263a; --mute:#4d6479; --line:#b7c7d4;
+  --accent:#d9480f; --link:#0b5cad;
+  --display:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--body);
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:40px 40px;background-position:-1px -1px}
+body::before{content:"";position:fixed;inset:0;background:linear-gradient(var(--paper) 0,rgba(232,238,243,.86) 100%);pointer-events:none;z-index:-1}
+a{color:var(--link)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:16px;flex-wrap:wrap}
+.top nav{display:flex;gap:20px;flex-wrap:wrap}
+.top nav a{color:var(--ink);text-decoration:none;font-weight:500}
+.top nav a:hover{color:var(--accent)}
+.clock{font-size:.9rem;color:var(--mute)}
+.hero{display:grid;grid-template-columns:1fr 1.15fr;gap:32px;align-items:center;padding:28px 0 56px}
+h1{font:800 clamp(2.4rem,5.6vw,4.2rem)/1.02 var(--display);margin:0 0 18px;letter-spacing:-.02em}
+.lede{font-size:1.2rem;max-width:34ch;margin:0 0 22px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 20px;border:2px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:500;background:var(--paper2)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:3px 3px 0 var(--ink)}
+.stage{position:relative;border:2px solid var(--ink);background:var(--paper2);aspect-ratio:1.1/1;min-height:300px}
+.stage canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none}
+.stage small{position:absolute;left:10px;top:8px;font-size:.78rem;color:var(--mute);pointer-events:none}
+section{padding:44px 0;border-top:2px solid var(--ink)}
+h2{font:700 1.9rem/1.1 var(--display);margin:0 0 22px}
+.proj{border-bottom:1px solid var(--line)}
+.proj summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:16px 0}
+.proj summary::-webkit-details-marker{display:none}
+.proj h3{font:700 1.3rem/1.2 var(--display);margin:0}
+.proj .tag{color:var(--mute);font-size:.92rem;text-align:right}
+.proj summary::after{content:"+";font:700 1.4rem var(--display);color:var(--accent);margin-left:8px}
+.proj[open] summary::after{content:"\2212"}
+.proj .body{padding:0 0 18px;max-width:68ch}
+.proj .body p{margin:0 0 10px}
+.status{display:inline-block;font-size:.82rem;border:1.5px solid var(--accent);color:var(--accent);padding:1px 8px;margin-left:8px;vertical-align:middle}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.cols h3{font:700 1.1rem var(--display);margin:0 0 8px}
+ul.plain{margin:0;padding:0;list-style:none}
+ul.plain li{padding:7px 0;border-bottom:1px solid var(--line)}
+ul.plain li b{font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{border:1.5px solid var(--ink);padding:3px 10px;font-size:.93rem;background:var(--paper2)}
+footer{padding:36px 0 56px;border-top:2px solid var(--ink);color:var(--mute)}
+@media (max-width:820px){.hero{grid-template-columns:1fr}.proj .tag{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <nav aria-label="Sections">
+      <a href="#projects">Projects</a><a href="#honors">Honors</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="clock" id="clock" aria-live="off"></div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <h1>Abhishek Chandran M R</h1>
+        <p class="lede">I build rovers, robotic arms and edge-AI systems, from the chassis to the code. Looking for a robotics internship.</p>
+        <div class="btns">
+          <a class="btn primary" href="#projects">See my projects</a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="stage">
+        <small id="readout">Move your pointer. The arm solves inverse kinematics live.</small>
+        <canvas id="arm" role="img" aria-label="A four-joint robotic arm that reaches toward your pointer using inverse kinematics"></canvas>
+      </div>
+    </div>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <details class="proj" open>
+        <summary><h3>PUNARVA: landslide survivor-detection rover</h3><span class="tag">1st prize NSITE, 2nd place NIT Calicut</span></summary>
+        <div class="body">
+          <p>A rover designed to find people who are still alive and trapped inside landslides, combining ground-penetrating sensing with AI.</p>
+          <p>1st prize at the NSITE national hackathon (Nehru Group of Institutions). 2nd place in prototype demonstration at INNOVEX, Tathva, NIT Calicut. Selected for Stage 3 of the Vishwakarma Awards.</p>
+        </div>
+      </details>
+
+      <details class="proj">
+        <summary><h3>Edge-AI crop protection network</h3><span class="tag">State winner, YIP (K-DISC)</span></summary>
+        <div class="body">
+          <p>A robotic system that detects animals at the edge of crop fields and scares them away using drones, rovers and hexapods, chosen to suit each crop. It also turns ordinary cameras into AI cameras that do security and animal detection.</p>
+          <p>State-level winner in the Young Innovators Programme. Presented as a paper at the Kerala Science Congress.</p>
+        </div>
+      </details>
+
+      <details class="proj">
+        <summary><h3>EXON: six-axis arm for non-planar 3D printing<span class="status">in progress</span></h3><span class="tag">Python, PyBullet</span></summary>
+        <div class="body">
+          <p>Repurposing the open-source PAROL6 six-axis arm into a 3D printer with the nozzle in place of the gripper. Printing along curved paths in more than three axes cuts the support material that conventional printing needs, and the same arm can handle complex shapes for other applications.</p>
+        </div>
+      </details>
+
+      <details class="proj">
+        <summary><h3>EDNA: universal-input robotic arm</h3><span class="tag">Self-designed, scaled-down six-axis arm</span></summary>
+        <div class="body">
+          <p>A scaled-down six-axis arm of my own design with a universal software adapter, so it accepts serial data from any control or slicing software.</p>
+        </div>
+      </details>
+
+      <details class="proj">
+        <summary><h3>Self-righting planetary rover<span class="status">in progress</span></h3><span class="tag">Raspberry Pi, servo limbs</span></summary>
+        <div class="body">
+          <p>A rover that balances itself and gets back on its wheels after a roll or tip-over, using dedicated brace limbs. The goal is easier exploration of rough terrain that current rovers cannot cross.</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="honors">
+      <h2>Honors</h2>
+      <ul class="plain">
+        <li><b>State winner</b>, Young Innovators Programme (K-DISC)</li>
+        <li><b>1st prize</b>, NSITE national hackathon, Nehru Group of Institutions, plus 1st, 2nd and 3rd places for other projects at later editions</li>
+        <li><b>2nd place</b>, prototype demonstration, INNOVEX, Tathva, NIT Calicut</li>
+        <li><b>Stage 3 selection</b>, Vishwakarma Awards, for my rover and my robotic arm</li>
+        <li><b>Paper presented</b>, Kerala Science Congress</li>
+        <li><b>Prizes</b> at district-level competitions</li>
+        <li><b>Gold medal</b>, Kerala State Boxing Championship</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="cols">
+        <div><h3>Electronics and embedded</h3><div class="chips"><span>Raspberry Pi</span><span>PCA9685</span><span>L298N</span><span>BTS7960</span><span>MPU6050</span><span>Servos and steppers</span><span>UART / I2C</span><span>PCB layout</span></div></div>
+        <div><h3>Software and vision</h3><div class="chips"><span>Python</span><span>OpenCV</span><span>YOLOv8</span><span>PyBullet</span><span>PyQt5</span><span>Flask</span><span>Linux and Bash</span><span>Git</span></div></div>
+        <div><h3>Mechanical and fabrication</h3><div class="chips"><span>Fusion 360</span><span>FDM 3D printing</span><span>Sheet metal</span><span>Plywood and aluminium builds</span></div></div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul class="plain">
+        <li><b>BS, Aeronautics and Space Technology</b>, IIT Madras (ongoing)</li>
+        <li><b>B.Tech, Electronics and Communication Engineering</b>, Jyothi Engineering College, Thrissur (from August 2026)</li>
+        <li>Class XII and X, Lakshmi Narayana Vidyanikethan, Palapuram, Palakkad</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <ul class="plain">
+        <li>Email: <a href="mailto:muthalamchiraabhishek@gmail.com">muthalamchiraabhishek@gmail.com</a></li>
+        <li>Phone: <a href="tel:+919747423852">+91 97474 23852</a></li>
+        <li>GitHub: <a href="https://github.com/muthalamchira-peacock">github.com/muthalamchira-peacock</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/abhishek-muthalamchira-1552423ab">linkedin.com/in/abhishek-muthalamchira-1552423ab</a></li>
+        <li>Based in Thrissur, Kerala, India</li>
+      </ul>
+    </section>
+  </main>
+  <footer>Abhishek Chandran M R. Built by hand with HTML, CSS and JavaScript.</footer>
+</div>
+
+<script>
+(function(){
+  // Live local time in Kerala
+  var clock=document.getElementById('clock');
+  function tick(){
+    try{clock.textContent='Kerala, '+new Date().toLocaleTimeString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',second:'2-digit'})+' IST';}catch(e){}
+  }
+  tick();setInterval(tick,1000);
+
+  // Inverse-kinematics arm (FABRIK solver)
+  var cv=document.getElementById('arm'),ctx=cv.getContext('2d'),readout=document.getElementById('readout');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var W,H,dpr,base,lens,pts,target,goal,lastMove=0,N=4;
+  var cs=getComputedStyle(document.documentElement);
+  var INK=cs.getPropertyValue('--ink').trim(),ACC=cs.getPropertyValue('--accent').trim(),MUTE=cs.getPropertyValue('--mute').trim(),LINE=cs.getPropertyValue('--line').trim();
+
+  function size(){
+    var r=cv.getBoundingClientRect();dpr=window.devicePixelRatio||1;
+    W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+    base={x:W*0.18,y:H*0.88};
+    var reach=Math.min(W*0.78,H*0.8);
+    lens=[0.34,0.28,0.22,0.16].map(function(f){return f*reach;});
+    pts=[];var a=-Math.PI/3,x=base.x,y=base.y;pts.push({x:x,y:y});
+    for(var i=0;i<N;i++){x+=Math.cos(a)*lens[i];y+=Math.sin(a)*lens[i];pts.push({x:x,y:y});}
+    target={x:pts[N].x,y:pts[N].y};goal={x:target.x,y:target.y};
+  }
+  function solve(t){
+    pts[N].x=t.x;pts[N].y=t.y;
+    for(var i=N-1;i>=0;i--){
+      var dx=pts[i].x-pts[i+1].x,dy=pts[i].y-pts[i+1].y,d=Math.hypot(dx,dy)||1;
+      pts[i].x=pts[i+1].x+dx/d*lens[i];pts[i].y=pts[i+1].y+dy/d*lens[i];
+    }
+    pts[0].x=base.x;pts[0].y=base.y;
+    for(var j=0;j<N;j++){
+      var ex=pts[j+1].x-pts[j].x,ey=pts[j+1].y-pts[j].y,e=Math.hypot(ex,ey)||1;
+      pts[j+1].x=pts[j].x+ex/e*lens[j];pts[j+1].y=pts[j].y+ey/e*lens[j];
+    }
+  }
+  function draw(t){
+    ctx.clearRect(0,0,W,H);
+    // reach envelope
+    var R=lens.reduce(function(a,b){return a+b;},0);
+    ctx.strokeStyle=LINE;ctx.lineWidth=1.5;ctx.setLineDash([5,6]);
+    ctx.beginPath();ctx.arc(base.x,base.y,R,Math.PI,Math.PI*2);ctx.stroke();ctx.setLineDash([]);
+    // base plate
+    ctx.fillStyle=INK;ctx.fillRect(base.x-26,base.y+6,52,10);
+    // links
+    ctx.lineCap='round';ctx.lineJoin='round';
+    var wd=[16,13,10,8];
+    for(var i=0;i<N;i++){
+      ctx.strokeStyle=INK;ctx.lineWidth=wd[i];
+      ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[i+1].x,pts[i+1].y);ctx.stroke();
+    }
+    // joints
+    for(var k=0;k<N;k++){
+      ctx.fillStyle='#f4f7f9';ctx.strokeStyle=ACC;ctx.lineWidth=3;
+      ctx.beginPath();ctx.arc(pts[k].x,pts[k].y,6,0,7);ctx.fill();ctx.stroke();
+    }
+    // end effector (gripper)
+    var ang=Math.atan2(pts[N].y-pts[N-1].y,pts[N].x-pts[N-1].x);
+    ctx.save();ctx.translate(pts[N].x,pts[N].y);ctx.rotate(ang);
+    ctx.strokeStyle=ACC;ctx.lineWidth=4;
+    ctx.beginPath();ctx.moveTo(0,-9);ctx.lineTo(13,-9);ctx.moveTo(0,9);ctx.lineTo(13,9);ctx.moveTo(0,-9);ctx.lineTo(0,9);ctx.stroke();
+    ctx.restore();
+    // target marker
+    ctx.strokeStyle=MUTE;ctx.lineWidth=1.5;
+    ctx.beginPath();ctx.moveTo(goal.x-8,goal.y);ctx.lineTo(goal.x+8,goal.y);ctx.moveTo(goal.x,goal.y-8);ctx.lineTo(goal.x,goal.y+8);ctx.stroke();
+    // joint angle readout
+    if(Math.floor(t/120)!==draw.last){
+      draw.last=Math.floor(t/120);
+      var s=[],prev=-Math.PI/2;
+      for(var m=0;m<N;m++){
+        var a=Math.atan2(pts[m+1].y-pts[m].y,pts[m+1].x-pts[m].x);
+        s.push('J'+(m+1)+' '+Math.round(((a-prev)*180/Math.PI+540)%360-180)+'\u00b0');prev=a;
+      }
+      readout.textContent=s.join('   ');
+    }
+  }
+  function frame(t){
+    if(t-lastMove>2500){ // idle sweep when the pointer is still
+      var R=lens.reduce(function(a,b){return a+b;},0)*0.8;
+      goal.x=base.x+R*0.55+Math.cos(t/1300)*R*0.4;
+      goal.y=base.y-R*0.5+Math.sin(t/900)*R*0.4;
+    }
+    target.x+=(goal.x-target.x)*0.14;target.y+=(goal.y-target.y)*0.14;
+    solve(target);draw(t);
+    if(!reduce)requestAnimationFrame(frame);
+  }
+  function move(e){
+    var r=cv.getBoundingClientRect();
+    goal.x=Math.max(0,Math.min(W,e.clientX-r.left));
+    goal.y=Math.max(0,Math.min(H,e.clientY-r.top));
+    lastMove=performance.now();
+    if(reduce){target.x=goal.x;target.y=goal.y;solve(target);draw(performance.now());}
+  }
+  window.addEventListener('pointermove',move,{passive:true});
+  window.addEventListener('resize',size);
+  size();
+  if(reduce){goal.x=base.x+lens[0]*1.5;goal.y=base.y-lens[0]*1.6;target.x=goal.x;target.y=goal.y;solve(target);draw(0);}
+  else requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
